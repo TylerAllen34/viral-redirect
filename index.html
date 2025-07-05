@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <meta name="robots" content="noindex">
+
   <style>
-    /* Hide everything visually */
+    /* Hide page visually */
     html, body {
       margin: 0;
       padding: 0;
@@ -16,7 +17,7 @@
     }
   </style>
 
-  <!-- TikTok Pixel (loads first) -->
+  <!-- TikTok Pixel -->
   <script>
     !function (w, d, t) {
       w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];
@@ -37,17 +38,16 @@
     }(window, document, 'ttq');
   </script>
 
-  <!-- Instant Redirect -->
+  <!-- Slight delay (400ms) to let TikTok Pixel fire -->
   <script>
-    // Wait just enough for pixel to register (300ms max), then redirect
     setTimeout(function () {
       window.location.replace("https://stan.store/silentequity/p/the-viral-script-system");
-    }, 100); // You can adjust to 200–300ms if needed
+    }, 400);
   </script>
 </head>
 
 <body>
-  <!-- Nothing will display; just here for fallback -->
+  <!-- Fallback if JS is off -->
   <noscript>
     <meta http-equiv="refresh" content="0; url=https://stan.store/silentequity/p/the-viral-script-system">
   </noscript>
