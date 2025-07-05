@@ -4,14 +4,12 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <meta name="robots" content="noindex">
-
   <style>
-    /* Hide page visually */
     html, body {
       margin: 0;
       padding: 0;
-      background: #fff;
       height: 100vh;
+      background: #fff;
       overflow: hidden;
       display: none;
     }
@@ -38,16 +36,15 @@
     }(window, document, 'ttq');
   </script>
 
-  <!-- Slight delay (400ms) to let TikTok Pixel fire -->
+  <!-- Fast but Pixel-Friendly Redirect -->
   <script>
-    setTimeout(function () {
+    setTimeout(() => {
       window.location.replace("https://stan.store/silentequity/p/the-viral-script-system");
-    }, 400);
+    }, 500); // 500ms = just enough time for TikTok to register
   </script>
 </head>
 
 <body>
-  <!-- Fallback if JS is off -->
   <noscript>
     <meta http-equiv="refresh" content="0; url=https://stan.store/silentequity/p/the-viral-script-system">
   </noscript>
