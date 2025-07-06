@@ -2,32 +2,64 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="2;url=https://your-destination-url.com" />
 
-    <!-- Meta Pixel Code -->
+    <!-- TikTok Pixel Base Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', 'D1K3VV3C77U8FVH5CIV0');
-      fbq('track', 'PageView');
+      !function (w, d, t) {
+        w.TiktokAnalyticsObject = t;
+        var ttq = w[t] = w[t] || [];
+        ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie"];
+        ttq.setAndDefer = function (t, e) {
+          t[e] = function () {
+            t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+          }
+        };
+        for (var i = 0; i < ttq.methods.length; i++) {
+          ttq.setAndDefer(ttq, ttq.methods[i])
+        }
+        ttq.instance = function (t) {
+          var e = ttq._i[t] || [];
+          for (var n = 0; n < ttq.methods.length; n++) {
+            ttq.setAndDefer(e, ttq.methods[n])
+          }
+          return e
+        };
+        ttq.load = function (e, n) {
+          var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
+          ttq._i = ttq._i || {};
+          ttq._i[e] = [];
+          ttq._i[e]._u = i;
+          ttq._t = ttq._t || {};
+          ttq._t[e] = +new Date;
+          ttq._o = ttq._o || {};
+          ttq._o[e] = n || {};
+          var o = document.createElement("script");
+          o.type = "text/javascript";
+          o.async = !0;
+          o.src = i + "?sdkid=" + e + "&lib=" + t;
+          var a = document.getElementsByTagName("script")[0];
+          a.parentNode.insertBefore(o, a)
+        };
+
+        ttq.load('D1K3VV3C77U8FVH5CIV0'); // your Pixel ID
+        ttq.page();
+    }(window, document, 'ttq');
     </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=D1K3VV3C77U8FVH5CIV0&ev=PageView&noscript=1" />
-    </noscript>
-    <!-- End Meta Pixel Code -->
+
+    <!-- Meta refresh fallback in case JavaScript fails -->
+    <meta http-equiv="refresh" content="3; url=https://stan.store/silentequity/p/the-viral-script-system" />
   </head>
+
   <body>
-    <div style="text-align: center; padding-top: 100px;">
-      <h2>Redirecting...</h2>
-      <p>If you're not redirected, <a href="https://your-destination-url.com">click here</a>.</p>
-    </div>
+    <h1 style="text-align:center; margin-top:20%;">Redirecting you to the Viral Script System...</h1>
+
+    <script>
+      // Optional: Delay to allow pixel to fire
+      setTimeout(() => {
+        window.location.href = "https://stan.store/silentequity/p/the-viral-script-system";
+      }, 2500);
+    </script>
   </body>
 </html>
