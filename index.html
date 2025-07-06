@@ -1,35 +1,33 @@
-import Head from 'next/head';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="2;url=https://your-destination-url.com" />
 
-export default function Home() {
-  return (
-    <>
-      <Head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', 'D1K3VV3C77U8FVH5CIV0');
-              fbq('track', 'PageView');
-            `,
-          }}
-        />
-        <noscript>
-          <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=D1K3VV3C77U8FVH5CIV0&ev=PageView&noscript=1"/>
-        </noscript>
-      </Head>
-
-      {/* Optional: keep redirect delay */}
-      <meta httpEquiv="refresh" content="2;url=https://your-destination.com" />
-
-      <p>Redirecting... If it doesn’t redirect automatically, <a href="https://your-destination.com">click here</a>.</p>
-    </>
-  );
-}
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'D1K3VV3C77U8FVH5CIV0');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=D1K3VV3C77U8FVH5CIV0&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <div style="text-align: center; padding-top: 100px;">
+      <h2>Redirecting...</h2>
+      <p>If you're not redirected, <a href="https://your-destination-url.com">click here</a>.</p>
+    </div>
+  </body>
+</html>
